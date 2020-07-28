@@ -1,7 +1,14 @@
 import React from 'react';
+import { Header } from './components/Header';
+import { ScreenReaderLink } from './components/ScreenReaderLink';
 
 const App = () => {
-  return <h1>Hello World!</h1>;
+  return (
+    <>
+      <ScreenReaderLink skipTo="main" message="Skip to main content" />
+      <Header />
+    </>
+  );
 };
 
 export default App;
