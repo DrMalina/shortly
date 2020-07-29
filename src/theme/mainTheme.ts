@@ -4,7 +4,7 @@ export const theme = {
     background: `hsl(257, 27%, 26%)`,
     error: `hsl(0, 87%, 67%)`,
     gray100: `hsl(0, 0%, 75%)`,
-    gray200t: `hsl(257, 7%, 63%)`,
+    gray200: `hsl(257, 7%, 63%)`,
     gray300: `hsl(255, 11%, 22%)`,
     gray400: `hsl(260, 8%, 14%)`,
     black: `hsl(0, 0, 0)`,

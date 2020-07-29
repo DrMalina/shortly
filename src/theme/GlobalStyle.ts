@@ -15,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${theme.fontSize.s};
     font-family: 'Poppins', sans-serif;
     font-weight: ${theme.fontWeight.regular};
-    padding: 3rem 2rem;
     min-height: 100vh;
   }
 `;
