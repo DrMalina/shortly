@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from './components/Header';
 import { HeroBanner } from './components/HeroBanner';
 import { ScreenReaderLink } from './components/ScreenReaderLink';
+import { Shortener } from './components/Shortener';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Header />
       <main id="main">
         <HeroBanner />
+        <Shortener />
       </main>
     </>
   );
