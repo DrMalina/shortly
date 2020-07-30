@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     font-weight: ${theme.fontWeight.regular};
     min-height: 100vh;
+    overflow-x: hidden;
   }
 `;
 

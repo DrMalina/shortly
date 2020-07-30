@@ -29,9 +29,9 @@ export const Link = styled.a<LinkProps>`
   ${(props) =>
     props.primary &&
     `border-radius: 3rem;
-    padding: 1.6rem 0;
-    background-color: ${theme.colors.primary};
-  `}
+      padding: 1.6rem 0;
+      background-color: ${theme.colors.primary};
+    `}
 `;
 
 export const List = styled.ul<MobileContainerProps>`
