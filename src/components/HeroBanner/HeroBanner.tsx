@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ImageWrapper, Image, HeroContent, Heading, SubHeading, Link } from './style';
+import { ImageWrapper, Image, HeroContent, Heading, Paragraph, Link } from './style';
 import workingSVG from '../../assets/images/illustration-working.svg';
 
 export const HeroBanner: FC = () => {
@@ -10,9 +10,9 @@ export const HeroBanner: FC = () => {
       </ImageWrapper>
       <HeroContent>
         <Heading>More than just shorter links</Heading>
-        <SubHeading>
+        <Paragraph>
           Build your brand’s recognition and get detailed insights on how your links are performing.
-        </SubHeading>
+        </Paragraph>
         <Link href="#">Get Started</Link>
       </HeroContent>
     </section>

@@ -25,7 +25,7 @@ export const Heading = styled.h1`
   letter-spacing: -1px;
 `;
 
-export const SubHeading = styled.h2`
+export const Paragraph = styled.p`
   margin-top: 1.8rem;
   padding: 0 2rem;
   line-height: 3rem;
