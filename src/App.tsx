@@ -1,4 +1,5 @@
 import React from 'react';
+import { CTA } from './components/CTA';
 import { Features } from './components/Features';
 import { Header } from './components/Header';
 import { HeroBanner } from './components/HeroBanner';
@@ -14,6 +15,7 @@ const App = () => {
         <HeroBanner />
         <Shortener />
         <Features />
+        <CTA />
       </main>
     </>
   );
