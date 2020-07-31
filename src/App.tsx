@@ -1,4 +1,5 @@
 import React from 'react';
+import { Features } from './components/Features';
 import { Header } from './components/Header';
 import { HeroBanner } from './components/HeroBanner';
 import { ScreenReaderLink } from './components/ScreenReaderLink';
@@ -12,6 +13,7 @@ const App = () => {
       <main id="main">
         <HeroBanner />
         <Shortener />
+        <Features />
       </main>
     </>
   );
