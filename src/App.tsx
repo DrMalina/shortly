@@ -1,6 +1,7 @@
 import React from 'react';
 import { CTA } from './components/CTA';
 import { Features } from './components/Features';
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { HeroBanner } from './components/HeroBanner';
 import { ScreenReaderLink } from './components/ScreenReaderLink';
@@ -17,6 +18,7 @@ const App = () => {
         <Features />
         <CTA />
       </main>
+      <Footer />
     </>
   );
 };
