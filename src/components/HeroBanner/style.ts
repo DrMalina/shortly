@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { theme } from '../../theme/mainTheme';
 
+export const Container = styled.section`
+  overflow: hidden;
+`;
+
 export const ImageWrapper = styled.div`
   width: 50rem;
   height: 33rem;

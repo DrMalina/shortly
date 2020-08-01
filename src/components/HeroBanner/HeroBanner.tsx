@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import { ImageWrapper, Image, HeroContent, Heading, Paragraph, Link } from './style';
+import { Container, ImageWrapper, Image, HeroContent, Heading, Paragraph, Link } from './style';
 import workingSVG from '../../assets/images/illustration-working.svg';
 
 export const HeroBanner: FC = () => {
   return (
-    <section>
+    <Container>
       <ImageWrapper>
         <Image src={workingSVG} alt="Illustration of a person working at desk" />
       </ImageWrapper>
@@ -15,6 +15,6 @@ export const HeroBanner: FC = () => {
         </Paragraph>
         <Link href="#">Get Started</Link>
       </HeroContent>
-    </section>
+    </Container>
   );
 };
