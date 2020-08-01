@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { Container, SrLabel, Input, Button } from './style';
+import { Wrapper, Container, SrLabel, Input, Button } from './style';
 
 export const Shortener: FC = () => {
   return (
-    <section>
+    <Wrapper>
       <Container>
         <SrLabel htmlFor="inputLink">Paste a link to shorten it:</SrLabel>
         <Input
@@ -14,6 +14,6 @@ export const Shortener: FC = () => {
         />
         <Button type="submit">Shorten It!</Button>
       </Container>
-    </section>
+    </Wrapper>
   );
 };

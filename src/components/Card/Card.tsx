@@ -10,7 +10,7 @@ interface CardProps {
 export const Card: FC<CardProps> = ({ heading, paragraph, iconPath }) => {
   return (
     <Container>
-      <CardIcon src={iconPath} />
+      <CardIcon path={iconPath} />
       <CardContent>
         <CardHeading>{heading}</CardHeading>
         <CardParagraph>{paragraph}</CardParagraph>

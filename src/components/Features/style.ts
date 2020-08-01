@@ -19,18 +19,31 @@ export const Heading = styled.h2`
   letter-spacing: -0.7px;
   font-size: 2.8rem;
   font-weight: ${theme.fontWeight.bold};
+
+  @media (min-width: 975px) {
+    font-size: 4rem;
+  }
 `;
 
 export const Paragraph = styled.p`
-  font-size: ${theme.fontSize.xs};
+  font-size: 1.6rem;
   line-height: 2.8rem;
   color: ${theme.colors.gray200};
   margin-top: 2rem;
   padding: 0 0.8rem;
+
+  @media (min-width: 975px) {
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 54rem;
+    font-size: 1.8rem;
+  }
 `;
 
 export const CardsWrapper = styled.div`
   position: relative;
+  margin: 0 auto;
+  max-width: 1165px;
 
   &::after {
     content: '';
@@ -42,5 +55,23 @@ export const CardsWrapper = styled.div`
     width: 0.8rem;
     background-color: ${theme.colors.primary};
     z-index: 0;
+  }
+
+  @media (min-width: 1165px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 0.8rem;
+      width: 100%;
+      background-color: ${theme.colors.primary};
+      z-index: 0;
+    }
   }
 `;

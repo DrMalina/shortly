@@ -13,6 +13,10 @@ export const MobileContainer = styled.div<MobileContainerProps>`
   top: 9rem;
   z-index: 1;
   padding: 0 2.2rem;
+
+  @media (min-width: 775px) {
+    display: none;
+  }
 `;
 
 interface LinkProps {
@@ -25,6 +29,8 @@ export const Link = styled.a<LinkProps>`
   font-weight: ${theme.fontWeight.bold};
   text-decoration: none;
   padding: 1rem 0;
+  margin: 0 auto;
+  max-width: 28rem;
 
   ${(props) =>
     props.primary &&

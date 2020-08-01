@@ -7,4 +7,6 @@ export const Container = styled.header`
   align-items: center;
   padding: 3rem 2rem;
   position: relative;
+  max-width: 1165px;
+  margin: 0 auto;
 `;

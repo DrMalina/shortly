@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     box-sizing: inherit;
     background-color: ${theme.colors.white};
-    font-size: ${theme.fontSize.s};
+    font-size: 1.8rem;
     font-family: 'Poppins', sans-serif;
     font-weight: ${theme.fontWeight.regular};
     overflow-x: hidden;
