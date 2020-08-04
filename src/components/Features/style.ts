@@ -4,8 +4,7 @@ import { theme } from '../../theme/mainTheme';
 export const Container = styled.section`
   background-color: ${theme.colors.gray};
   text-align: center;
-  margin-top: -8.2rem;
-  padding-top: 8rem;
+  padding-top: 10rem;
   padding-bottom: 8rem;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
@@ -14,7 +13,6 @@ export const Container = styled.section`
 `;
 
 export const Heading = styled.h2`
-  margin-top: 10rem;
   color: ${theme.colors.gray300};
   letter-spacing: -0.7px;
   font-size: 2.8rem;
