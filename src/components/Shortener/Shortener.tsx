@@ -1,19 +1,8 @@
-import React, { FC, useState, useRef } from 'react';
+import React, { FC, useState } from 'react';
 import axios from 'axios';
-import { validateUrl } from '../../utils/validateUrl';
-import {
-  Section,
-  Wrapper,
-  Form,
-  SrLabel,
-  Input,
-  ErrorMsg,
-  Button,
-  Results,
-  ListItem,
-  OriginalLink,
-  ShortenLink,
-} from './style';
+import { ShortenerResult } from '../ShortenerResult';
+import { validateUrl } from '../../utils/';
+import { Section, Wrapper, Form, SrLabel, Input, ErrorMsg, Button, Results } from './style';
 
 interface Link {
   original: string;
@@ -37,12 +26,6 @@ export const Shortener: FC = () => {
     setQuery(e.target.value);
   };
 
-  const copyToClipboard = (idx: number): void => {
-    // find shorten link hash based on index
-    const copiedLink = `https://rel.ink/${results[idx].shortened}`;
-    navigator.clipboard.writeText(copiedLink);
-  };
-
   const handleSubmit = async (event: Submit): Promise<void> => {
     event.preventDefault();
     // prevent submiting empty input
@@ -56,13 +39,16 @@ export const Shortener: FC = () => {
             url: query,
           });
 
-          // display freshest results on top
           // limit results to 3
           if (results.length < 3) {
-            setResults([{ original: query, shortened: response.data.hashid }, ...results]);
-          } else {
             setResults([
-              { original: query, shortened: response.data.hashid },
+              { original: query, shortened: `https://rel.ink/${response.data.hashid}` },
+              ...results,
+            ]);
+          } else {
+            // display freshest results on top
+            setResults([
+              { original: query, shortened: `https://rel.ink/${response.data.hashid}` },
               results[0],
               results[1],
             ]);
@@ -110,13 +96,7 @@ export const Shortener: FC = () => {
             <SrLabel as="span">Shortened links</SrLabel>
             <ul>
               {results.map((result, idx) => (
-                <ListItem key={idx}>
-                  <OriginalLink href={result.original}>{result.original}</OriginalLink>
-                  <ShortenLink href={`https://rel.ink/${result.shortened}`}>
-                    https://rel.ink/{result.shortened}
-                  </ShortenLink>
-                  <button onClick={() => copyToClipboard(idx)}>Copy</button>
-                </ListItem>
+                <ShortenerResult key={result.shortened + idx} result={result} />
               ))}
             </ul>
           </Results>
