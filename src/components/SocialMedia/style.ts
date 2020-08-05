@@ -12,6 +12,13 @@ export const Icon = styled.li`
     margin-right: 2.4rem;
   }
 
+  button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+
   path {
     transition: ease-in-out 300ms fill;
   }
