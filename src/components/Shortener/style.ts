@@ -88,6 +88,9 @@ interface InputProps {
 }
 
 export const Input = styled.input<InputProps>`
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 3px solid ${(props) => (props.error ? theme.colors.error : theme.colors.white)};
   color: ${(props) => (props.error ? theme.colors.error : theme.colors.black)};
   border-radius: 0.5rem;
