@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 import bgMobile from '../../assets/images/bg-shorten-mobile.svg';
 import bgDesktop from '../../assets/images/bg-shorten-desktop.svg';
 
@@ -10,7 +9,7 @@ export const Section = styled.div`
 
   &:after {
     content: '';
-    background-color: ${theme.colors.gray};
+    background-color: ${({ theme }) => theme.colors.gray};
     position: absolute;
     top: 8rem;
     left: 0;
@@ -48,7 +47,7 @@ export const Form = styled.form`
   margin-right: auto;
   padding: 2.6rem;
   border-radius: 1rem;
-  background-color: ${theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
   background-image: url(${bgMobile});
   background-position: top right;
   background-repeat: no-repeat;
@@ -91,17 +90,18 @@ export const Input = styled.input<InputProps>`
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 3px solid ${(props) => (props.error ? theme.colors.error : theme.colors.white)};
-  color: ${(props) => (props.error ? theme.colors.error : theme.colors.black)};
+  border: 3px solid
+    ${(props) => (props.error ? props.theme.colors.error : props.theme.colors.white)};
+  color: ${(props) => (props.error ? props.theme.colors.error : props.theme.colors.black)};
   border-radius: 0.5rem;
   outline: none;
   padding: 1.3rem;
   font-family: inherit;
   font-size: 1.5rem;
-  font-weight: ${theme.fontWeight.regular};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
 
   ::placeholder {
-    color: ${(props) => (props.error ? theme.colors.error : theme.colors.gray300)};
+    color: ${(props) => (props.error ? props.theme.colors.error : props.theme.colors.gray300)};
   }
 
   @media (min-width: 775px) {
@@ -115,7 +115,7 @@ export const Input = styled.input<InputProps>`
 `;
 
 export const ErrorMsg = styled.p`
-  color: ${theme.colors.error};
+  color: ${({ theme }) => theme.colors.error};
   font-size: 1.3rem;
   font-style: italic;
   margin-top: 0.8rem;
@@ -135,18 +135,18 @@ export const ErrorMsg = styled.p`
 export const Button = styled.button`
   margin-top: 2rem;
   border: none;
-  background-color: ${theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   font-family: inherit;
   font-size: 1.8rem;
-  font-weight: ${theme.fontWeight.bold};
-  color: ${theme.colors.white};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.white};
   border-radius: 0.5rem;
   padding: 1rem;
   cursor: pointer;
   transition: ease-in-out 350ms background-color;
 
   &:hover {
-    background-color: ${theme.colors.primaryLight};
+    background-color: ${({ theme }) => theme.colors.primaryLight};
   }
 
   @media (min-width: 775px) {

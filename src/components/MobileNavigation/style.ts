@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 
 interface MobileContainerProps {
   isHidden?: Boolean;
@@ -25,8 +24,8 @@ interface LinkProps {
 
 export const Link = styled.a<LinkProps>`
   display: block;
-  color: ${theme.colors.white};
-  font-weight: ${theme.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   text-decoration: none;
   padding: 1rem 0;
   margin: 0 auto;
@@ -36,12 +35,12 @@ export const Link = styled.a<LinkProps>`
     props.primary &&
     `border-radius: 3rem;
       padding: 1.6rem 0;
-      background-color: ${theme.colors.primary};
+      background-color: ${props.theme.colors.primary};
     `}
 `;
 
 export const List = styled.ul<MobileContainerProps>`
-  background-color: ${theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
   text-align: center;
   border-radius: 1rem;
   padding: 3.4rem 2.4rem;
@@ -59,5 +58,5 @@ export const Divider = styled.div`
   width: 100%;
   height: 0.1rem;
   opacity: 0.25;
-  background-color: ${theme.colors.gray200};
+  background-color: ${({ theme }) => theme.colors.gray200};
 `;

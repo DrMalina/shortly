@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 
 export const ListItem = styled.li`
   margin-top: 3rem;
-  background-color: ${theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -20,8 +19,8 @@ export const ListItem = styled.li`
 
 export const OriginalLink = styled.a`
   flex: 1;
-  color: ${theme.colors.gray300};
-  border-bottom: 2px solid ${theme.colors.gray};
+  color: ${({ theme }) => theme.colors.gray300};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.gray};
   padding-bottom: 1.6rem;
   text-decoration: none;
   text-overflow: ellipsis;
@@ -40,7 +39,7 @@ export const OriginalLink = styled.a`
 
 export const ShortenLink = styled.a`
   text-decoration: none;
-  color: ${theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   margin-right: 2rem;
@@ -57,11 +56,12 @@ interface ButtonProps {
 
 export const Button = styled.button<ButtonProps>`
   border: none;
-  background-color: ${(props) => (props.copied ? theme.colors.background : theme.colors.primary)};
+  background-color: ${(props) =>
+    props.copied ? props.theme.colors.background : props.theme.colors.primary};
   font-family: inherit;
   font-size: 1.6rem;
-  font-weight: ${theme.fontWeight.bold};
-  color: ${theme.colors.white};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.white};
   border-radius: 0.5rem;
   padding: 0.8rem 3rem;
   cursor: pointer;
@@ -69,7 +69,7 @@ export const Button = styled.button<ButtonProps>`
 
   &:hover {
     background-color: ${(props) =>
-      props.copied ? theme.colors.background : theme.colors.primaryLight};
+      props.copied ? props.theme.colors.background : props.theme.colors.primaryLight};
   }
 
   @media (min-width: 775px) {

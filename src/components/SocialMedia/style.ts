@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 
 export const Container = styled.ul`
   display: flex;
@@ -25,7 +24,7 @@ export const Icon = styled.li`
 
   &:hover {
     path {
-      fill: ${theme.colors.primary};
+      fill: ${({ theme }) => theme.colors.primary};
     }
   }
 `;

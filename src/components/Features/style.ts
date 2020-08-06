@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 
 export const Container = styled.section`
-  background-color: ${theme.colors.gray};
+  background-color: ${({ theme }) => theme.colors.gray};
   text-align: center;
   padding-top: 10rem;
   padding-bottom: 8rem;
@@ -13,10 +12,10 @@ export const Container = styled.section`
 `;
 
 export const Heading = styled.h2`
-  color: ${theme.colors.gray300};
+  color: ${({ theme }) => theme.colors.gray300};
   letter-spacing: -0.7px;
   font-size: 2.8rem;
-  font-weight: ${theme.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
 
   @media (min-width: 975px) {
     font-size: 4rem;
@@ -26,7 +25,7 @@ export const Heading = styled.h2`
 export const Paragraph = styled.p`
   font-size: 1.6rem;
   line-height: 2.8rem;
-  color: ${theme.colors.gray200};
+  color: ${({ theme }) => theme.colors.gray200};
   margin-top: 2rem;
   padding: 0 0.8rem;
 
@@ -51,7 +50,7 @@ export const CardsWrapper = styled.div`
     transform: translateX(-50%);
     height: 100%;
     width: 0.8rem;
-    background-color: ${theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.primary};
     z-index: 0;
   }
 
@@ -68,7 +67,7 @@ export const CardsWrapper = styled.div`
       transform: translateY(-50%);
       height: 0.8rem;
       width: 100%;
-      background-color: ${theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.primary};
       z-index: 0;
     }
   }

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 
 export const Button = styled.button`
   border: none;
@@ -46,28 +45,28 @@ export const Link = styled.a<LinkProps>`
   text-decoration: none;
   margin-left: 2.4rem;
   font-size: 1.5rem;
-  font-weight: ${theme.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: 2rem;
-  color: ${theme.colors.gray200};
+  color: ${({ theme }) => theme.colors.gray200};
   transition: ease-in-out 250ms color;
 
   &:hover {
-    color: ${theme.colors.gray300};
+    color: ${({ theme }) => theme.colors.gray300};
   }
 
   ${(props) =>
     props.primary &&
     `
   display: block;
-  color: ${theme.colors.white};
+  color: ${props.theme.colors.white};
   border-radius: 3rem;
   padding: 1rem 2rem;
-  background-color: ${theme.colors.primary};
+  background-color: ${props.theme.colors.primary};
   transition: ease-in-out 350ms background-color;
 
   &:hover {
-    color: ${theme.colors.white};
-    background-color: ${theme.colors.primaryLight};
+    color: ${props.theme.colors.white};
+    background-color: ${props.theme.colors.primaryLight};
   }
   `}
 `;

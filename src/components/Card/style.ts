@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 
 export const Container = styled.div`
   position: relative;
   margin-top: 9rem;
   margin-right: auto;
   margin-left: auto;
-  background-color: ${theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 0.5rem;
   z-index: 1;
   max-width: 45rem;
@@ -40,7 +39,7 @@ export const CardIcon = styled.div<CardIconProps>`
   top: -4.4rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: ${theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
   background-image: url(${(props) => props.path});
   background-position: center;
   background-repeat: no-repeat;
@@ -59,14 +58,14 @@ export const CardContent = styled.div`
 `;
 
 export const CardHeading = styled.h3`
-  font-weight: ${theme.fontWeight.bold};
-  color: ${theme.colors.gray300};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.gray300};
   font-size: 2.2rem;
 `;
 
 export const CardParagraph = styled.p`
   margin-top: 3rem;
   font-size: 1.5rem;
-  color: ${theme.colors.gray200};
+  color: ${({ theme }) => theme.colors.gray200};
   line-height: 2.6rem;
 `;

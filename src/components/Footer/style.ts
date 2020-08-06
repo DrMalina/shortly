@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 
 export const Wrapper = styled.footer`
-  background-color: ${theme.colors.gray400};
+  background-color: ${({ theme }) => theme.colors.gray400};
   text-align: center;
   padding-top: 6rem;
   padding-bottom: 5.2rem;
@@ -22,8 +21,8 @@ export const Container = styled.div`
 
 export const Logo = styled.a`
   font-size: 2.8rem;
-  font-weight: ${theme.fontWeight.bold};
-  color: ${theme.colors.white};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.white};
   opacity: 0.9;
   text-decoration: none;
 
@@ -80,21 +79,21 @@ export const Section = styled.div`
 `;
 
 export const Heading = styled.h2`
-  color: ${theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   opacity: 0.9;
   font-size: 1.6rem;
-  font-weight: ${theme.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   margin-bottom: 2.2rem;
 `;
 
 export const Link = styled.a`
-  color: ${theme.colors.gray100};
+  color: ${({ theme }) => theme.colors.gray100};
   font-size: 1.5rem;
   text-decoration: none;
   line-height: 3.2rem;
   letter-spacing: -0.2px;
 
   &:hover {
-    color: ${theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;

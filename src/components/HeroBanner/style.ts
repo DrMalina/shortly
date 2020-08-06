@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../theme/mainTheme';
 
 export const Section = styled.section`
   position: relative;
@@ -70,8 +69,8 @@ export const HeroContent = styled.div`
 
 export const Heading = styled.h1`
   font-size: 4.2rem;
-  font-weight: ${theme.fontWeight.bold};
-  color: ${theme.colors.gray300};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.gray300};
   line-height: 4.6rem;
   letter-spacing: -1px;
 
@@ -86,7 +85,7 @@ export const Paragraph = styled.p`
   margin-top: 1.8rem;
   padding: 0 2rem;
   line-height: 3rem;
-  color: ${theme.colors.gray200};
+  color: ${({ theme }) => theme.colors.gray200};
 
   @media (min-width: 700px) {
     margin-top: 0.8rem;
@@ -104,16 +103,16 @@ export const Link = styled.a`
   display: inline-block;
   margin-top: 2.6rem;
   font-size: 2rem;
-  font-weight: ${theme.fontWeight.bold};
-  background-color: ${theme.colors.primary};
-  color: ${theme.colors.white};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
   border-radius: 2.8rem;
   padding: 1.6rem 4.2rem;
   transition: ease-in-out 350ms background-color;
 
   &:hover {
-    background-color: ${theme.colors.primaryLight};
+    background-color: ${({ theme }) => theme.colors.primaryLight};
   }
 
   @media (min-width: 700px) {

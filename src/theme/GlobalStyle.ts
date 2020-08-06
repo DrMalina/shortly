@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import { theme } from './mainTheme';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -12,10 +11,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     box-sizing: inherit;
-    background-color: ${theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white};
     font-size: 1.8rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: ${theme.fontWeight.regular};
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
     overflow-x: hidden;
   }
 `;
